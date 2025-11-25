@@ -9,9 +9,9 @@
     <style>
         /* Definisi Warna Brand Cinta Quran */
         :root {
-            --color-primary: #0080df;   /* BIRU (New Main Brand Color) */
-            --color-accent-cta: #8cba14; /* Hijau Cerah/Lighter Green (New CTA) */
-            --color-secondary-accent: #0080df; /* Biru (Highlight) - Sama dengan primary untuk konsistensi di sini */
+            --color-primary: #0080df;   /* BIRU (Main Brand Color - Header, Secondary Links) */
+            --color-accent-cta: #8cba14; /* Hijau Cerah/Lighter Green (Unused, but kept for context) */
+            --color-secondary-accent: #0080df; /* Biru (Highlight) */
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -27,14 +27,37 @@
         .text-teal {
             color: var(--color-primary); 
         }
-        /* New CTA Button Style using the brighter green */
+        
+        /* Primary Action Button (Submission - Solid Blue background, White text) */
         .btn-primary {
-            background-color: var(--color-accent-cta); 
-            transition: background-color 0.3s ease;
+            background-color: var(--color-primary); /* BIRU */
+            color: white; /* Font Putih */
+            border: 2px solid var(--color-primary); 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 128, 223, 0.3);
         }
         .btn-primary:hover {
-            background-color: #759c11; /* Darker shade of #8cba14 for hover effect */
+            background-color: #0066b5; /* Darker Blue on hover */
+            border-color: #0066b5; 
+            box-shadow: 0 10px 15px -3px rgba(0, 128, 223, 0.4);
+            transform: scale(1.05); 
         }
+
+        /* Secondary Action Button (Website Link - White background, Blue text/border) */
+        .btn-secondary {
+            background-color: white; /* Latar Putih */
+            color: var(--color-primary); /* Font Biru */
+            border: 2px solid var(--color-primary); /* Border Biru */
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .btn-secondary:hover {
+            background-color: #E6F0FF; /* Very light blue background on hover */
+            border-color: var(--color-primary); 
+            color: var(--color-primary);
+            transform: scale(1.05);
+        }
+
         /* Update header contrast: Use a light color for text on the dark blue background */
         .header-bg .text-teal-200 {
             color: #E0F2F1; 
@@ -44,7 +67,7 @@
             background-color: #004D9F; 
         }
         
-        /* New Custom Styles for Section Highlights using the blue secondary accent (which is now the primary color) */
+        /* New Custom Styles for Section Highlights */
         .highlight-bg-soft {
             background-color: #E6F0FF; /* Very light blue background */
         }
@@ -76,9 +99,10 @@
                 <span class="inline-block px-3 py-1 bg-teal-700/50 rounded-full">#IndonesiaCintaQuran</span>
             </div>
             
-            <!-- Link to Website for Product Knowledge -->
-            <div class="mt-8">
-                <a href="https://cintaquran.com/" target="_blank" class="btn-primary inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
+            <!-- Link to Website for Product Knowledge - Only one button remains in the header -->
+            <div class="mt-8 flex justify-center">
+                <!-- Website Link (Secondary Action) -->
+                <a href="https://cintaquran.com/" target="_blank" class="btn-secondary inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-full transform hover:scale-105 duration-300">
                     <!-- Icon for external link/website -->
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     Kunjungi Website Cinta Quran Learning
@@ -202,7 +226,6 @@
                 <li>
                     <strong class="text-gray-800">Analisis Situasi:</strong> Ringkasan Analisis SWOT (Strengths, Weaknesses, Opportunities, Threats) perusahaan saat ini.
                 </li>
-               
                 <li>
                     <strong class="text-gray-800">Key Performance Indicators (KPIs) & Metrik:</strong> Minimal 3 KPI utama Sales dan 3 KPI utama Marketing.
                 </li>
@@ -220,6 +243,17 @@
         </section>
 
     </main>
+    
+    <!-- Submission Button Section (Moved to Bottom) -->
+    <section class="max-w-4xl mx-auto px-4 py-8 text-center">
+        <h3 class="text-xl font-semibold mb-6 text-gray-700">Selesaikan Strategic Planning Brief Anda dan kirimkan hasilnya di sini.</h3>
+        <!-- Submission Link (Primary Action) -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBY1amN3lnQPFbkJ-MYKo8YHx9A4PQLCDO9y9LcUT3Bx586g/viewform?usp=publish-editor" target="_blank" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full shadow-2xl duration-300">
+            <!-- Icon for document upload/submission -->
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+            Hasil Assessment Kirim di Sini
+        </a>
+    </section>
     
     <!-- Footer -->
     <footer class="header-bg py-4 mt-8">
